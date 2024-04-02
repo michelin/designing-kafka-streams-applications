@@ -1,3 +1,23 @@
+# Table of contents
+
+- [Introduction](#introduction)
+- [Concepts](#concepts)
+  - [Kafka topology](#kafka-topology)
+  - [_Master_ topology](#_master_-topology)
+  - [_Micro_ topology](#_micro_-topology)
+- [Hierarchical breakdown](#hierarchical-breakdown)
+  - [Kafka Oriented "Maslow's pyramid"](#kafka-oriented-maslows-pyramid)
+  - [Foundation: Business Requirements](#foundation-business-requirements)
+  - [Master Topology](#master-topology)
+  - [Micro Topology](#micro-topology)
+  - [Pinnacle: Development](#pinnacle-development)
+  - [Understanding the Pyramid](#understanding-the-pyramid)
+- [What's next ?](#whats-next-)
+- [Master and Micro Topology visualization](#master-and-micro-topology-visualization)
+  - [Master Topology](#master-topology)
+  - [Micro Topology](#micro-topology)
+- [Illustrated example](#illustrated-example)
+- [Conclusion](#conclusion)
 
 ## Introduction
 
