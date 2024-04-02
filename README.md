@@ -134,7 +134,7 @@ Master topologies represent an iterative journey in Kafka stream application des
   - **Orange**: Implies that the component needs updating.
   - **Red**: Indicates that the component, represented by this diamond shape, is slated for deletion.
 
-![colors.jpeg](https://blogit.azureedge.net/images/2024/3/271541_colors.jpeg)
+![](assets/topology/colors.jpeg)
 
 ### Micro Topology
 
