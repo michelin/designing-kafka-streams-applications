@@ -19,8 +19,6 @@
 - [Illustrated example](#illustrated-example)
 - [Conclusion](#conclusion)
 
-## Introduction
-
 <div align="justify">
 
 For the past 4 years, our journey into the heart of Kafka's capabilities has been shaped by two pivotal concepts: Master Topologies and Micro Topologies. These conceptual frameworks have become the backbone of our Kafka Streams application design, offering a comprehensive and granular understanding of our end-to-end communication.
@@ -62,27 +60,35 @@ The Micro Topology is a detailed graph visualization specifically tailored for a
 
 </div> 
 
-## Hierarchical breakdown
+## Kafka Oriented "Maslow's pyramid"
+
+![](assets/topology/maslows_pyramid.jpeg)
 
 <div align="justify">
 
-### Kafka Oriented "Maslow's pyramid"
-
-![](assets/topology/maslows_pyramid.jpeg)  
-
 Drawing inspiration from Maslow's pyramid, our approach to build Kafka projects aligns with a hierarchical structure, where each level builds upon the foundation laid by the preceding one. Much like Maslow's hierarchy, the effectiveness and clarity of our Kafka develoments are contingent upon a stepwise progression, emphasizing the fundamental importance of understanding business needs.
+
+</div>
 
 ### Foundation: Business Requirements
 
+<div align="justify">
+
 At the base of our Kafka hierarchy lies the bedrock – the understanding of business needs. This foundational layer, comprising 50% of our effort, parallels Maslow's physiological needs. Without a clear grasp of the business requirements, the subsequent layers risk instability. Business needs act as the sustenance for our Kafka ecosystem, steering the course and purpose of our data flows.
+
+</div>
 
 #### Who's needed for that step and what for ?
 
-![](assets/topology/roles_first.jpeg)  
+![](assets/topology/roles_first.jpeg)
 
 ### Master Topology
 
+<div align="justify">
+
 Deriving from the clarity of business needs, the Master Topology serves as the safety and security tier, mirroring Maslow's safety needs. Accounting for 25% of our effort, this tier defines all functional requirements such as defining public Avro schemas and correlation keys. It also breaks down business processes into individual services, ensuring each bears a singular responsibility. Just as safety is fundamental for human well-being, a well-defined Master Topology forms the core structure that guards against complexity and confusion.
+
+</div>
 
 #### Who's needed for that step and what for ?
 
@@ -90,26 +96,38 @@ Deriving from the clarity of business needs, the Master Topology serves as the s
 
 ### Micro Topology
 
+<div align="justify">
+
 Moving up the pyramid, the Micro Topology equates to the social and belongingness needs in Maslow's hierarchy, occupying 15% of our effort. Here, the detailed view of services fosters a sense of community and interconnectedness. Micro Topologies delve into the specifics of each service, defining all technical requirements, establishing a shared language and understanding among developers, akin to the human need for social connections.
+
+</div>
 
 #### Who's needed for that step and what for ?
 
 ![](assets/topology/roles_third.jpeg)   
 
 ### Pinnacle: Development
+
+<div align="justify">
+
 At the summit of our Kafka hierarchy, the Development tier echoes Maslow's self-actualization needs. Representing the culmination of our efforts, this tier accounts for 10% of the job. Here, developers bring the Kafka ecosystem to life, translating the conceptualized topologies into functional and efficient streams applications. This tier is the realization of our architectural aspirations.
+
+</div>
 
 #### Who's needed for that step and what for ?
 
 ![](assets/topology/roles_fourth.jpeg)
 
 ### Understanding the Pyramid
+
+<div align="justify">
+
 - *Synergy*: The pyramid represents a symbiotic relationship, where the foundation of business needs supports the subsequent tiers. Without a robust understanding of business requirements, the Master and Micro Topologies lack direction, and development efforts may be misaligned.
 - *Iterative Nature*: Like Maslow's pyramid, our Kafka hierarchy is iterative. As business needs evolve, the pyramid adapts, ensuring the continuous alignment of our topologies with the dynamic landscape of the organization.
 - *Interconnected Layers*: The layers within our pyramid are intricately linked, allowing for fluid communication and evolution across the hierarchy. For instance, designing the master topology can lead to adjustments or refinements in the expression of business requirements.
 
-The practice of master and micro topologies for an extended four-year period has significantly contributed to our operational efficiency. Here are couple fo benefits and real-world impacts that have unfolded as a result of this sustained approach :
-- **Clarity and Consistency**: By adhering to this naming convention, our Kafka topics become a language in themselves. Developers, analysts, and stakeholders can quickly decipher the purpose and nature of a topic with a mere glance, fostering a culture of clarity and consistency.
+The practice of master and micro topologies for an extended four-year period has significantly contributed to our operational efficiency. Here are couple of benefits and real-world impacts that have unfolded as a result of this sustained approach :
+- **Clarity and Consistency**: By adhering to this naming convention, our Kafka topics become a language in themselves. Developers, analysts, and stakeholders can quickly decipher the purpose and nature of a topic at a glance, fostering a culture of clarity and consistency.
 - **Efficient Development**: The convention serves as a blueprint during development, steering teams towards a standardized approach. It minimizes confusion, accelerates development cycles, and ensures a harmonious coexistence of topics within the Kafka ecosystem.
 - **Enhanced Debugging and Troubleshooting**: When the unexpected occurs, the naming convention acts as a diagnostic tool. Each segment provides clues, simplifying the debugging process and facilitating swift issue resolution.
 
@@ -117,7 +135,11 @@ The practice of master and micro topologies for an extended four-year period has
 
 ## What's next ?
 
+<div align="justify">
+
 Once you have reached the top of the pyramid, your services are up and running in a development environment. It is now time to consider moving to production. Before proceeding, there are still several stages to fulfill, such as conducting tests at scale, implementing monitoring and observabilitty, sizing your microservices, and so on.
+
+</div>
 
 #### Who's needed for that step and what for ?
 
@@ -128,24 +150,21 @@ Once you have reached the top of the pyramid, your services are up and running i
 
 To bring our master and micro topologies to life, we leverage the usage of Draw.io. This collaborative visualization tool proves to be exceptionally user-friendly, allowing seamless collaboration among team members (and as a side-note, it synchronizes well on OneDrive, we could even store them on Gitlab for version control as models are XML-based).
 
-We've gone a step further to ensure a standardized and intuitive representation of components within our master and micro topologies.
+We have gone a step further to ensure a standardized and intuitive representation of components within our master and micro topologies.
+
+</div>
 
 ### Master Topology
 
+<div align="justify">
+
 Master topologies represent an iterative journey in Kafka stream application design, where the use of colors plays a pivotal role in maintaining clarity and facilitating evolution. In our approach, an up-to-date topology is depicted predominantly in gray, reflecting the current state of our production environment. Introducing new elements to the topology is symbolized by the color green, while red signifies the removal of obsolete components, and orange denotes modifications to existing ones. With each significant change introduced to our production environment, dedicated master topology snapshots are created. This enables the entire team, including builders, runners, architects, and business stakeholders, to easily reference and visualize the modifications made, ensuring a streamlined and collaborative approach to managing our Kafka ecosystem's evolution.
 
-- Example: 
+- Example:
 
 ![](assets/topology/master_topo_example.jpeg)
 
-- Shapes: 
-
-  - **Diamond-Shaped** Form: Kafka Streams microservice
-  - **Circular** Form : Kafka Topic
-  - **Inverted House** : Kafka Connect
-  - **Hexagon** Kafka Producer / Consumer microservice
-
-![](assets/topology/legend_components_1.jpeg) 
+![](assets/topology/legend_components_1.jpeg)
 
 - Regarding the colors:
 
@@ -156,23 +175,21 @@ Master topologies represent an iterative journey in Kafka stream application des
 
 ![](assets/topology/colors.jpeg)
 
+</div>
+
 ### Micro Topology
 
-- Examples: 
+<div align="justify">
+
+- Examples:
 
 ![](assets/topology/micro_topo_example.jpeg)
 
-- Shapes:
 
-  - **Diamond-Shaped** form: Kafka Streams operators
-  - **Circular** form : Kafka Topic
-  - **Cylinder** form : State store
-  - **Yellow Text** Underlying logic of a specific operator
-
-![](assets/topology/legend_components_2.jpeg) 
+![](assets/topology/legend_components_2.jpeg)
 
 
-This standardized system of symbols and colors not only adds a visual layer to our topologies but also accelerates comprehension and decision-making during collaborative discussions on design modifications and updates. There's no global rule set for the overall company and every team can do as they prefer but having this clearly stated in your team is a pre-requesite for maintainability in the long run.
+This standardized system of symbols and colors not only adds a visual layer to our topologies but also accelerates comprehension and decision-making during collaborative discussions on design modifications and updates. There's no global rule set for the overall company and every team can do as they prefer but having this clearly stated in your team is a pre-requisite for maintainability in the long run.
 
 </div>
 
@@ -180,7 +197,7 @@ This standardized system of symbols and colors not only adds a visual layer to o
 
 <div align="justify">
 
-In this section, we'll explore a simplified business process centered around order management, spanning seven distinct steps. Each step within this process orchestrates specific actions with various systems within the information ecosystem.
+In this section, we will explore a simplified business process centered around order management, spanning seven distinct steps. Each step within this process depicts specific actions with various systems within the environment.
 
 ![](assets/topology/business_process.jpeg) 
 
@@ -190,7 +207,7 @@ Master topology is the representation of the business process on a macro level.
 
 ![](assets/topology/master_topo_illustrated.jpeg)
 
-And when we deep dive on the “Shipping” capabilities, we can go deep into the operations done inside the Micro topology itself :
+And when we deep dive on the “Shipping” capabilities, we can delve into the operations done inside the Micro topology itself :
 
 ![](assets/topology/micro_topo.jpeg)
 
@@ -198,4 +215,8 @@ And when we deep dive on the “Shipping” capabilities, we can go deep into th
 
 ## Conclusion
 
-In conclusion, the synergy of master and micro topologies in Kafka stream application design, accompanied by a meticulously structured naming convention, forms the backbone of a robust and maintainable ecosystem. The master topology provides a panoramic view, unraveling the complexities of business processes, while the micro topology delves into the intricacies of individual services, ensuring clarity at a granular level. The adoption of a standardized naming convention acts as a unifying language, fostering collaboration and consistency across teams. Together, these principles offer a holistic framework, guiding designers, developers, and users in crafting efficient, scalable, and comprehensible Kafka stream applications.
+<div align="justify">
+
+The synergy of master and micro topologies in Kafka Streams application design, accompanied by a meticulously structured naming convention, forms the backbone of a robust and maintainable ecosystem. The master topology provides a panoramic view, unraveling the complexities of business processes, while the micro topology delves into the intricacies of individual services, ensuring clarity at a granular level. The adoption of a standardized naming convention acts as a unifying language, fostering collaboration and consistency across teams. Together, these principles offer a holistic framework, guiding designers, developers, and users in crafting efficient, scalable, and comprehensible Kafka stream applications.
+
+</div>
