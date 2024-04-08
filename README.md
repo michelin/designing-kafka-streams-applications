@@ -12,7 +12,7 @@
   - [Micro Topology](#micro-topology-1)
   - [Pinnacle: Development](#pinnacle-development)
   - [Understanding the Pyramid](#understanding-the-pyramid)
-- [What's next ?](#whats-next)
+- [What's next ?](#whats-next-)
 - [Master and Micro Topology visualization](#master-and-micro-topology-visualization)
   - [Master Topology](#master-topology-2)
   - [Micro Topology](#micro-topology-2)
