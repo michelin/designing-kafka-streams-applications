@@ -1,12 +1,10 @@
 # Table of contents
 
-- [Introduction](#introduction)
 - [Concepts](#concepts)
   - [Kafka topology](#kafka-topology)
   - [_Master_ topology](#master-topology)
   - [_Micro_ topology](#micro-topology)
-- [Hierarchical breakdown](#hierarchical-breakdown)
-  - [Kafka Oriented "Maslow's pyramid"](#kafka-oriented-maslows-pyramid)
+- [Kafka Oriented "Maslow's pyramid"](#kafka-oriented-maslows-pyramid)
   - [Foundation: Business Requirements](#foundation-business-requirements)
   - [Master Topology](#master-topology-1)
   - [Micro Topology](#micro-topology-1)
