@@ -209,6 +209,36 @@ And when we deep dive on the “Shipping” capabilities, we can delve into the 
 
 ![](assets/topology/micro_topo.jpeg)
 
+And last, here is an example of the code that impements the topology:
+
+```java
+StoreBuilder<TimestampedKeyValueStore<String, ValidatedOrder>> store =
+    Stores.timestampedKeyValueStoreBuilder(
+        Stores.persistentTimestampedKeyValueStore("ORDER_STORE"),
+        Serdes.String(),
+        validatedOrderSerde);
+streamsBuilder.addStateStore(store);
+
+KStream<String, ValidatedOrder> orderStream =
+    streamsBuilder
+        .stream("VALID_AVRO", Consumed.with(Serdes.String(), validatedOrderSerde))
+        .process(OrderProcessor::new, "ORDER_STORE");
+
+KStream<String, ValidatedOrder> stockStream =
+    streamsBuilder
+        .stream("STOCK_OUT_AVRO", Consumed.with(Serdes.String(), stockSerde))
+        .selectKey((k, v) -> v.getOrderNumber())
+        .repartition(Repartitioned.with(Serdes.String(), stockSerde))
+        .process(StockProcessor::new, "ORDER_STORE");
+
+orderStream.merge(stockStream)
+     .to(
+        "TO_SHIP_AVRO",
+        Produced.with(Serdes.String(), validatedOrderSerde)
+     );
+```
+
+
 </div>
 
 ## Conclusion
